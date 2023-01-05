@@ -1,0 +1,58 @@
+:root {
+    --colorOne: #022b3a;
+    --colorTwo: #5e548e;
+    --colorThree: #ec3f13;
+    --colorFour: #fa5e1f;
+    --colorFive: #ff7e33;
+    --colorSix: #fdfdff;
+    --colorSeven: #000000;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    background: var(--colorFive);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    height: 3rem;
+    width: 3rem;
+}
+
+.container {
+    border: 5px solid white;
+    width: 90%;
+    height: 90%;
+}
+
+.calculator {
+    background: var(--colorOne);
+    width: 20rem;
+    height: 35rem;
+    border-radius: 10px;
+    box-shadow: 2px 4px 16px;
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 52px;
+
+    border: 5px solid red;
+}
+
+.fa-solid {
+    color: var(--colorFive);
+}
+
+button {
+    border-radius: 10px;
+    border-style: none;
+    justify-content: center;
+    align-items: center;
+    padding: 10px, 10px, 10px, 10px;
+    cursor: pointer;
+    margin: 5px;
+}
