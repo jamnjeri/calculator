@@ -31,7 +31,7 @@ npm install
 
 #### TASK LIST
 - [X] Build a basic calculator website
-- [ ] Activate the % button
+- [   ] Activate the % button
 
 ### CONCLUSION
 * The function of a % on the calculator proved challenging to create a function and hence is still being worked on.
