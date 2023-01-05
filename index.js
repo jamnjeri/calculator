@@ -1,3 +1,6 @@
+let mainDisplay = document.querySelector('.main');
+let subDisplay = document.querySelector('.sub-section');
+
 function numbersAddEventListenerFunc(){
     let numbers = document.querySelectorAll('.number')
     // console.log(numbers)
@@ -32,6 +35,7 @@ function symbolSortFunc(identifier){
     }
     else if (identifier === 'backspace') {
         console.log('backspace')
+        backSpaceFunc()
     }
     else if (identifier === 'percentage') {
         console.log('%')
@@ -68,13 +72,11 @@ function symbolSortFunc(identifier){
 }
 
 function equationFunc(){
-    let interest = document.querySelector('.sub-section')
-    let equation = interest.innerText
+    let equation = subDisplay.innerText
     console.log(equation)
     // Check if it's empty
     if (equation === ''){
-        let display = document.querySelector('.main')
-        display.innerText = 0
+        mainDisplay.innerText = 0
     }
     else {
         // Check if it has a % sign
@@ -90,26 +92,39 @@ function equationFunc(){
 }
 
 function answerFunc(equation){
-    let location = document.querySelector('.main')
     let answer = Function("return " + equation)();
-    location.innerText = answer
+    mainDisplay.innerText = answer
 }
 
 function deleteFunc(){
-    let display = document.querySelector('.main')
-    display.innerText = ''
-    let subDisplay = document.querySelector('.sub-section')
+    mainDisplay.innerText = ''
     subDisplay.innerText=''
 
 }
 
+function backSpaceFunc(){
+    let equation = subDisplay.innerText;
+    // Store in Array
+    const myArray = equation.split("");
+    //Remove last element
+    myArray.pop();
+
+    //Print last number in sub-display
+    let last = myArray.slice(-1);
+    let output = last.join("");
+    mainDisplay.innerText= output;
+
+    //Join result
+    let final = myArray.join("");
+    //Append to document
+    subDisplay.innerText = final;
+}
+
 function mainDisplayFunc(input){
-    let display = document.querySelector('.main')
-    display.innerText = input;
+    mainDisplay.innerText = input;
 }
 
 function subDisplayFunc(input){
-    let subDisplay = document.querySelector('.sub-section')
     let equation =subDisplay.innerText
     let finalInput = `${equation}${input}`
     subDisplay.innerText = finalInput;
