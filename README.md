@@ -58,5 +58,5 @@ npm install
 Copyright (c) 2022 **Mathu Jamila**
 
 
-## Sample Image:
-![Application Layout](sample-image.png)
+## Snapshot of the webpage:
+![Application Layout](sample.png)
