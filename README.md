@@ -34,8 +34,7 @@ npm install
 - [] Activate the % button
 
 ### CONCLUSION
-* The function of a % on the calculator proved challenging to create a function and hence is still being worked on
-* 
+* The function of a % on the calculator proved challenging to create a function and hence is still being worked on.
 
 ### Languages used to create this project
 * HTML,
